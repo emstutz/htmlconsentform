@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleconsent.css">
-    <title>Consent Form</title>
+    <title>Consent Form (Human Subjects)</title>
 </head>
 <body>
-    <header>Consent Form</header>
 
+    <header><center><h2>Consent Form (Human Subjects)</h2></center></header>
+    <p><center><label for="study"></label> 
+    <select name="study" id="study">
+        <option value="study1">study x</option>
+        <option value="study2">study x</option>
+        <option value="study3">study x</option>
+        <option value="study4">study x</option>
+        <option value="study5">study x</option>
+        <option value="study6">study x</option>
+    </select></center></p>
 <div>You are invited to participate in a research study conducted by Dr. Ulrich Mayr of the Department of
     Psychology from the University of Oregon. This study is funded by the National Institutes of Health. In our
     study we hope to learn about the processes involved in the regulation of thought and action. Thank you for
@@ -21,7 +30,7 @@
     while performing the task, and/or a measurement device in form of a belt around your torso to assess your
     breathing rhythm. The procedure involves minimal risk of discomfort or stress. </div>
     <p>
-    <label for="hours">This study will take</label> 
+    <label for="hours"><b>This study will take</b></label> 
         <select name="hours" id="hours">
             <option value=".5 hours">.5 hours</option>
             <option value="1 hour">1 hour</option>
@@ -32,7 +41,7 @@
         </select>
     </p>
     <p>
-    <label for="credits">You will earn</label> 
+    <label for="credits"><b>You will earn</b></label> 
     <select name="credits" id="credits">
         <option value=".5 credits">.5 credits</option>
         <option value="1 credit">1 credit</option>
@@ -42,17 +51,17 @@
         <option value="3 credits">3 credits</option>
     </select>
     </p>
-    <p>You can discontinue participation at any time during the experiment. If you discontinue participation in
+    <p><b>You can discontinue participation at any time during the experiment. If you discontinue participation in
     the middle of the study, you will receive ¼ credit for each 15 minutes of participation, rounded up to the
     next 15 minutes. For example, if you complete 1-15 minutes you will receive ¼ credit, if you complete 16-
     30 minutes you will receive ½ credit, and so on. If you keep your scheduled appointment but choose not
-    to participate in the study at all, you will still receive ¼ credit.
+    to participate in the study at all, you will still receive ¼ credit.</b>
     </p>
-<div>In this study, you will receive:</div>
+<div><b>In this study, you will receive:</b></div>
     <input type="checkbox" id="creditsonly" name="creditsonly" value="Hourly Credit Only">
-    <label for="creditsonly"> Hourly credit only</label><br>
+    <label for="creditsonly"><b>Hourly credit only</b></label><br>
     <input type="checkbox" id="credits&in" name="credits&in" value="Hourly credit + Extra incentives">
-    <label for="credits&in"> Hourly credit + Extra incentives</label><div>In addition to the hourly credit, participants will receive small rewards for
+    <label for="credits&in"><b>Hourly credit + Extra incentives</b></label><div>In addition to the hourly credit, participants will receive small rewards for
         correct answers, in the form of money (to yourself or to charity), food, or images. Reward compensation will be
         linked to random trial numbers and will result in the addition of 1-50 cents per correct trial for monetary
         incentives. Because you will not know which trials are linked to rewards it is important that you do your best on
@@ -68,12 +77,12 @@
             conditions that you are in, instead of with your name. 
             </p>
             <p>
-            Your participation is voluntary.  Your decision whether or not to participate will not affect your 
+            <b>Your participation is voluntary.  Your decision whether or not to participate will not affect your 
             relationship with the UO Psychology Department or the UO Linguistics Department. If you decide to 
             participate, you are free to withdraw your consent and discontinue participating at any time without 
             penalty.  The Psychology and Linguistics Departments have established alternative assignments for 
             students who do not wish to participate as research subjects.  Please see your instructor if you would 
-            rather complete an alternative assignment. 
+            rather complete an alternative assignment.</b> 
             </p>
             <p>
             In addition, if your participation was solicited through a health care provider, your participation in this 
@@ -96,17 +105,17 @@
                     rights or remedies. </p>
                     <p>
                     <form>
-                        Print Name:
+                        <b>Print Name:</b>
                         <input type="text" name="Pname">
                         </form>
                     </p>
                     <p>
                     <form>
-                    Date (mm/dd/yyyy):
+                   <b>Date (mm/dd/yyyy):</b>
                     <input type="text" name="date"
                     </form>
                 </p>
-                    <div>Signature:
+                    <div><b>Signature:</b>
                         <div class="flex-row">
                             <div class="wrapper">
                                 <canvas id="signature-pad" width="400" height="200"></canvas>
@@ -138,7 +147,15 @@
         signaturePad.clear();
        })
    </script>
-        
+
+   <p>
+   <center><button onclick="printFunction()" style ="height: 50px; width: 100px">Finish</button></center>
+</p>
+   <script>
+     function printFunction() { 
+       window.print(); 
+     }
+   </script>
     
 </body>
 
